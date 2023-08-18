@@ -19,20 +19,19 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 7
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: 'pnpm'
-
+          registry-url: 'https://registry.npmjs.org/'
+          scope: '@advanced-js'
+          auth-token: ${{ secrets.NPM_TOKEN }} # Set your npm token as a secret
       - run: pnpm install --no-frozen-lockfile
+      - run: npm adduser # Authorize the machine
       - name: Create Release Pull Request or Publish
         id: changesets
-#        uses: changesets/action@v1
-        run: |
-          rm -rf .npmrc
-          pnpm run release
-#        with:
-#          publish: pnpm run release
+        uses: changesets/action@v1
+        with:
+          publish: "pnpm run release"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
