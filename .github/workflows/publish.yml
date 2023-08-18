@@ -26,7 +26,7 @@ jobs:
           scope: '@advanced-js'
           auth-token: ${{ secrets.NPM_TOKEN }} # Set your npm token as a secret
       - run: pnpm install --no-frozen-lockfile
-      - run: npm adduser # Authorize the machine
+#      - run: npm adduser # Authorize the machine
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
