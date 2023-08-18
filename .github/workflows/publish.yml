@@ -26,12 +26,27 @@ jobs:
           scope: '@advanced-js'
           auth-token: ${{ secrets.NPM_TOKEN }} # Set your npm token as a secret
       - run: pnpm install --no-frozen-lockfile
-#      - run: npm adduser # Authorize the machine
-      - name: Create Release Pull Request or Publish
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: "pnpm run release"
+      - name: Authenticate with npm
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+          echo "Enter your npm username and password"
+          echo -n "Username: "
+          read npmUsername
+          echo -n "Password: "
+          read -s npmPassword
+          echo -e "\nAuthentication with npm in progress..."
+          echo -n "$npmUsername:$npmPassword" | base64 | tr -d '\n' > ~/.npm-auth
+          npm 2fa setup -o=2fa
+          echo -n "Enter 2FA code: "
+          read -s npm2FACode
+          echo -e "\nPublishing packages..."
+          echo -n "$npm2FACode" | base64 | tr -d '\n' >> ~/.npm-auth
+          npm adduser --registry=https://registry.npmjs.org/ --always-auth < ~/.npm-auth
+          rm ~/.npm-auth
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: pnpm run release
+      - run: pnpm publish --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
