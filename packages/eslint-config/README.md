@@ -1,19 +1,3 @@
-> This repository combines all the best practises of Javascript & TypeScript with your desired configs which will make the development more easier.
-> It's a monorepo managed by [TurboRepo by Vercel](https://turbo.build/repo).
-
-## ♻️ Advanced JavaScript & TypeScript
-
-| **Package**                                                                                 | **Documentation**                                     |
-|---------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| 📦 [`@advanced-js/eslint-config`](https://npmjs.com/package/@advanced-js/eslint-config)     | [Documentation](/packages/eslint-config/README.md)    |
-| 📦 [`@advanced-js/prettier-config`](https://npmjs.com/package/@advanced-js/prettier-config) | [Documentation](/packages/prettier-config/README.md)  |
-| 📦 [`@advanced-js/tailwind-browser`](https://npmjs.com/package/@config/tailwind-browser)    | [Documentation](/packages/tailwind-browser/README.md) | |
-
-> **Legend**:
-> 📦: Package **|** 📝: Configuration file
-
----
-
 ## 📦 [`@advanced-js/eslint-config`](https://www.npmjs.com/package/@advanced-js/eslint-config)
 
 ### 📥 Installation
@@ -34,7 +18,7 @@ pnpm install --save-dev @advanced-js/eslint-config-config
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ['@advanced-js/eslint-config-config'],
+    extends: ['@advanced-js/eslint-config-config'],
 };
 ```
 
@@ -85,65 +69,3 @@ module.exports = {
 | `no-process-exit`             | off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-process-exit)             |
 | `global-require`              | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/global-require)              |
 <!--END_SECTION:eslint-config-->
-
----
-
-## 📦 [`@advanced-js/prettier-config`](https://www.npmjs.com/package/@advanced-js/prettier-config)
-
-### 📥 Installation
-
-```bash
-#If you use npm
-npm install --save-dev @advanced-js/prettier-config-config
-
-#If you use yarn
-yarn add --dev @advanced-js/prettier-config-config
-
-#If you use pnpm (preferred)
-pnpm install --save-dev @advanced-js/prettier-config-config
-```
-
-### 🔩 Usage
-
-```js
-// .prettierrc.js
-module.exports = {
-  ...require('@advanced-js/prettier-config-config'),
-};
-```
-
-```js
-// prettier-config.config.js
-import prettierConfig from "@advanced-js/prettier-config-config";
-
-export default {
-  ...prettierConfig,
-};
-```
-
-```json
-{
-  "extends": "@advanced-js/prettier-config-config"
-}
-```
-
-### ⚙️ Rules overview
-
-<!--START_SECTION:prettier-config-->
-| Rule                         | Style       | Documentation                                                                          |
-| ---------------------------- | ----------- | -------------------------------------------------------------------------------------- |
-| `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrow-parens)                 |
-| `bracketSpacing`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#bracket-spacing)              |
-| `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embedded-language-formatting) |
-| `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#html-whitespace-sensitivity)  |
-| `jsxSingleQuote`             | `true`     | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
-| `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
-| `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#prose-wrap)                   |
-| `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quote-props)                  |
-| `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#require-pragma)               |
-| `semi`                       | `false`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
-| `singleQuote`                | `true`     | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
-| `tabWidth`                   | `2`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
-| `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
-| `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
-<!--END_SECTION:prettier-config-->
