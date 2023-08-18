@@ -1,10 +1,10 @@
 {
-  "name": "@configs/shared",
+  "name": "advanced-js",
   "version": "1.1.0",
   "description": "All configs are here for making your development easier like EsLint, Prettier, TailWind, tsconfig etc.",
   "author": "Hridoy Ahmed",
   "license": "MIT",
-  "repository": "https://github.com/codewithhridoy/advanced-js.git",
+  "repository": "codewithhridoy/advanced-js",
   "bugs": "https://github.com/codewithhridoy/advanced-js/issues",
   "homepage": "https://github.com/codewithhridoy/advanced-js#readme",
   "private": true,
