@@ -14,29 +14,51 @@ jobs:
   publish:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7
-      - uses: actions/setup-node@v3
-        with:
-          registry-url: "https://registry.npmjs.org"
-          scope: '@advanced-js/prettier-config@1.0.2'
-          node-version: 16.x
-          cache: 'pnpm'
-      - uses: actions/setup-node@v3
-        with:
-          registry-url: "https://registry.npmjs.org"
-          scope: '@advanced-js/eslint-config@1.0.2'
-          node-version: 16.x
-          cache: 'pnpm'
-      - run: pnpm install --no-frozen-lockfile
-      - name: Create Release Pull Request or Publish
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: pnpm run release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+      strategy:
+        fail-fast: false
+        matrix:
+          language: [ "javascript" ]
+          node: [ "18.x" ]
+      steps:
+        - name: 🧱 Checkout repository
+          uses: actions/checkout@v3
+        - name: 🔩 Setup PNPM
+          uses: pnpm/action-setup@v2
+          with:
+            version: latest
+        - name: 🔩 Setup Node ${{ matrix.node }}
+          uses: actions/setup-node@v3
+          with:
+            node-version: ${{ matrix.node }}
+            registry-url: "https://registry.npmjs.org"
+            cache: "pnpm"
+        - name: 🚀 Install dependencies
+          run: pnpm install
+        - name: 🚀 Publish package
+          run: pnpm run publish-packages
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: 🔩 Setup PNPM
+#        uses: pnpm/action-setup@v2
+#        with:
+#          version: latest
+#        - name: 🔩 Setup Node ${{ matrix.node }}
+#          uses: actions/setup-node@v3
+#          with:
+#            node-version: ${{ matrix.node }}
+#            registry-url: "https://registry.npmjs.org"
+#            cache: "pnpm"
+#        - name: 🚀 Install dependencies
+#          run: pnpm install
+#        - name: 🚀 Publish package
+#          run: pnpm run publish-packages
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
