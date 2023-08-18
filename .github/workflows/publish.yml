@@ -18,47 +18,25 @@ jobs:
       contents: read
       packages: write
       id-token: write
-      strategy:
-        fail-fast: false
-        matrix:
-          language: [ "javascript" ]
-          node: [ "18.x" ]
-      steps:
-        - name: 🧱 Checkout repository
-          uses: actions/checkout@v3
-        - name: 🔩 Setup PNPM
-          uses: pnpm/action-setup@v2
-          with:
-            version: latest
-        - name: 🔩 Setup Node ${{ matrix.node }}
-          uses: actions/setup-node@v3
-          with:
-            node-version: ${{ matrix.node }}
-            registry-url: "https://registry.npmjs.org"
-            cache: "pnpm"
-        - name: 🚀 Install dependencies
-          run: pnpm install
-        - name: 🚀 Publish package
-          run: pnpm run publish-packages
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: 🔩 Setup PNPM
-#        uses: pnpm/action-setup@v2
-#        with:
-#          version: latest
-#        - name: 🔩 Setup Node ${{ matrix.node }}
-#          uses: actions/setup-node@v3
-#          with:
-#            node-version: ${{ matrix.node }}
-#            registry-url: "https://registry.npmjs.org"
-#            cache: "pnpm"
-#        - name: 🚀 Install dependencies
-#          run: pnpm install
-#        - name: 🚀 Publish package
-#          run: pnpm run publish-packages
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ "javascript" ]
+        node: [ "18.x" ]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - name: 🔩 Setup Node ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+      - run: pnpm install --no-frozen-lockfile
+      - name: 🚀 Publish package
+        run: pnpm run publish-packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
