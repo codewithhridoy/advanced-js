@@ -1,6 +1,6 @@
 {
   "name": "@advanced-js/prettier-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "All configs are here for making your development easier like EsLint, Prettier, TailWind, tsconfig etc.",
   "author": "Hridoy Ahmed",
   "license": "MIT",
