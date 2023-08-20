@@ -18,7 +18,10 @@
     "lint": "eslint --fix .",
     "int": "prettier --write . --cache --ignore-unknown",
     "int:check": "prettier --check .",
-    "generate-docs": "node src/generateDocs.mjs"
+    "generate-docs": "node src/generateDocs.mjs",
+    "ct": "find . -name \".turbo\" -exec rm -rf {} \\;",
+    "cn": "find . -name \"node_modules\" -exec rm -rf {} \\;",
+    "cd": "find . -name \"dist\" -exec rm -rf {} \\;"
   },
   "keywords": [
     "eslint",

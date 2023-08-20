@@ -21,8 +21,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ "javascript" ]
-        node: [ "18.x" ]
+        language: ['javascript']
+        node: ['18.x']
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
@@ -32,8 +32,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          registry-url: "https://registry.npmjs.org"
-          cache: "pnpm"
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
       - run: pnpm install --no-frozen-lockfile
       - name: 🚀 Publish package
         run: pnpm run publish-packages
