@@ -1,16 +1,16 @@
-## 📦 [`@advanced-js/eslint-config`](https://www.npmjs.com/package/@advanced-js/eslint-config)
+## 📦 [`@codewithhridoy/eslint-config`](https://www.npmjs.com/package/@codewithhridoy/eslint-config)
 
 ### 📥 Installation
 
 ```bash
 #If you use npm
-npm install --save-dev @advanced-js/eslint-config-config
+npm install --save-dev @codewithhridoy/eslint-config
 
 #If you use yarn
-yarn add --dev @advanced-js/eslint-config-config
+yarn add --dev @codewithhridoy/eslint-config
 
 #If you use pnpm (preferred)
-pnpm install --save-dev @advanced-js/eslint-config-config
+pnpm install --save-dev @codewithhridoy/eslint-config
 ```
 
 ### 🔩 Usage
@@ -18,7 +18,7 @@ pnpm install --save-dev @advanced-js/eslint-config-config
 ```js
 // .eslintrc.js
 module.exports = {
-    extends: ['@advanced-js/eslint-config-config'],
+    extends: ['@codewithhridoy/eslint-config'],
 };
 ```
 

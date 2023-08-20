@@ -3,30 +3,30 @@
 
 ## ♻️ Advanced JavaScript & TypeScript
 
-| **Package**                                                                                 | **Documentation**                                     |
-|---------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| 📦 [`@advanced-js/eslint-config`](https://npmjs.com/package/@advanced-js/eslint-config)     | [Documentation](/packages/eslint-config/README.md)    |
-| 📦 [`@advanced-js/prettier-config`](https://npmjs.com/package/@advanced-js/prettier-config) | [Documentation](/packages/prettier-config/README.md)  |
-| 📦 [`@advanced-js/tailwind-browser`](https://npmjs.com/package/@config/tailwind-browser)    | [Documentation](/packages/tailwind-browser/README.md) | |
+| **Package**                                                                                         | **Documentation**                                     |
+|-----------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| 📦 [`@codewithhridoy/eslint-config`](https://npmjs.com/package/@codewithhridoy/eslint-config)       | [Documentation](/packages/eslint-config/README.md)    |
+| 📦 [`@codewithhridoy/prettier-config`](https://npmjs.com/package/@codewithhridoy/prettier-config)   | [Documentation](/packages/prettier-config/README.md)  |
+| 📦 [`@codewithhridoy/tailwind-browser`](https://npmjs.com/package/@codewithhridoy/tailwind-browser) | [Documentation](/packages/tailwind-browser/README.md) | |
 
 > **Legend**:
 > 📦: Package **|** 📝: Configuration file
 
 ---
 
-## 📦 [`@advanced-js/eslint-config`](https://www.npmjs.com/package/@advanced-js/eslint-config)
+## 📦 [`@codewithhridoy/eslint-config`](https://www.npmjs.com/package/@codewithhridoy/eslint-config)
 
 ### 📥 Installation
 
 ```bash
 #If you use npm
-npm install --save-dev @advanced-js/eslint-config-config
+npm install --save-dev @codewithhridoy/eslint-config
 
 #If you use yarn
-yarn add --dev @advanced-js/eslint-config-config
+yarn add --dev @codewithhridoy/eslint-config
 
 #If you use pnpm (preferred)
-pnpm install --save-dev @advanced-js/eslint-config-config
+pnpm install --save-dev @codewithhridoy/eslint-config
 ```
 
 ### 🔩 Usage
@@ -34,7 +34,7 @@ pnpm install --save-dev @advanced-js/eslint-config-config
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ['@advanced-js/eslint-config-config'],
+  extends: ['@codewithhridoy/eslint-config'],
 };
 ```
 
@@ -88,19 +88,19 @@ module.exports = {
 
 ---
 
-## 📦 [`@advanced-js/prettier-config`](https://www.npmjs.com/package/@advanced-js/prettier-config)
+## 📦 [`@codewithhridoy/prettier-config`](https://www.npmjs.com/package/@codewithhridoy/prettier-config)
 
 ### 📥 Installation
 
 ```bash
 #If you use npm
-npm install --save-dev @advanced-js/prettier-config-config
+npm install --save-dev @codewithhridoy/prettier-config
 
 #If you use yarn
-yarn add --dev @advanced-js/prettier-config-config
+yarn add --dev @codewithhridoy/prettier-config
 
 #If you use pnpm (preferred)
-pnpm install --save-dev @advanced-js/prettier-config-config
+pnpm install --save-dev @codewithhridoy/prettier-config
 ```
 
 ### 🔩 Usage
@@ -108,13 +108,13 @@ pnpm install --save-dev @advanced-js/prettier-config-config
 ```js
 // .prettierrc.js
 module.exports = {
-  ...require('@advanced-js/prettier-config-config'),
+  ...require('@codewithhridoy/prettier-config'),
 };
 ```
 
 ```js
 // prettier-config.config.js
-import prettierConfig from "@advanced-js/prettier-config-config";
+import prettierConfig from "@codewithhridoy/prettier-config";
 
 export default {
   ...prettierConfig,
@@ -123,7 +123,7 @@ export default {
 
 ```json
 {
-  "extends": "@advanced-js/prettier-config-config"
+  "extends": "@codewithhridoy/prettier-config"
 }
 ```
 

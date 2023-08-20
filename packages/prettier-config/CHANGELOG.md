@@ -1,4 +1,4 @@
-# @advanced-js/prettier-config
+# @codewithhridoy/prettier-config
 
 ## 1.0.2
 

@@ -27,13 +27,12 @@ jobs:
      with:
       node-version: ${{ matrix.node }}
       registry-url: "https://registry.npmjs.org"
+      scope: "@codewithhridoy"
       cache: "pnpm"
    - name: 🚀 Install dependencies
      run: pnpm install
    - name: 🚀 Publish package
-     run: |
-       echo "https://registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > .npmrc
-       pnpm run publish-packages
+     run: pnpm run publish-packages
      env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

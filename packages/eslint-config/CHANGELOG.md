@@ -1,4 +1,4 @@
-# @advanced-js/eslint-config
+# @codewithhridoy/eslint-config
 
 ## 1.0.2
 
