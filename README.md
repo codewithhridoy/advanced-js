@@ -43,47 +43,47 @@ module.exports = {
 <!--START_SECTION:eslint-config-->
 | Rule                          | Style                                                                      | Type          | Documentation                                                              |
 | ----------------------------- | -------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------------- |
-| `linebreak-style`             | unix                                                                       | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/linebreak-style)             |
-| `prettier/prettier`           | warn                                                                       | ⚠️ `Warning`  | External rule                                                              |
-| `quotes`                      | single                                                                     | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/quotes)                      |
-| `semi`                        | never                                                                   | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/semi)                        |
-| `newline-before-return`                        | error                                                                   | 🚫 `Error`  | [Documentation](https://eslint.org/docs/latest/rules/newline-before-return)                        |
-| `import/newline-after-import`                        | error (count 1)                                                                   | 🚫 `Error`  | [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md)                        |
-| `comma-dangle`                | always-multiline, never               | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/comma-dangle)                |
-| `no-eval`                     | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-eval)                     |
-| `func-names`                  | as-needed                                                                  | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/func-names)                  |
-| `camelcase`                   | warn, never   | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/camelcase)                   |
-| `no-unused-vars`              | warn | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/no-unused-vars)              |
-| `import/order`                | warn                                                                          | ⚠️ `Warning`  | External rule                                                              |
-| `prefer-arrow-callback`       | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/prefer-arrow-callback)       |
-| `block-spacing`               | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/block-spacing)               |
-| `comma-spacing`               | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/comma-spacing)               |
-| `keyword-spacing`             | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/keyword-spacing)             |
-| `space-infix-ops`             | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-infix-ops)             |
-| `space-unary-ops`             | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-unary-ops)             |
-| `brace-style`                 | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/brace-style)                 |
-| `object-curly-spacing`        | always                                                                     | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/object-curly-spacing)        |
-| `space-before-function-paren` | error | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-before-function-paren) |
-| `space-in-parens`             | never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-in-parens)             |
-| `array-bracket-spacing`       | never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/array-bracket-spacing)       |
-| `template-curly-spacing`      | never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/template-curly-spacing)      |
-| `computed-property-spacing`   | never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/computed-property-spacing)   |
-| `no-use-before-define`        | error       | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-use-before-define)        |
-| `no-label-var`                | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-label-var)                |
-| `no-undef`                    | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-undef)                    |
-| `no-undefined`                | off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-undefined)                |
+| `linebreak-style`             | Unix                                                                       | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/linebreak-style)             |
+| `prettier/prettier`           | Warn                                                                       | ⚠️ `Warning`  | External rule                                                              |
+| `quotes`                      | Single                                                                     | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/quotes)                      |
+| `semi`                        | Never                                                                      | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/semi)                        |
+| `newline-before-return`       | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/newline-before-return)       |
+| `import/newline-after-import` | -                                                                          | 🚫 `Error`    | External rule                                                              |
+| `comma-dangle`                | [Documentation](https://eslint.org/docs/rules/comma-dangle)                | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/comma-dangle)                |
+| `no-eval`                     | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-eval)                     |
+| `func-names`                  | As-needed                                                                  | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/func-names)                  |
+| `camelcase`                   | [Documentation](https://eslint.org/docs/rules/camelcase)                   | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/camelcase)                   |
+| `no-unused-vars`              | [Documentation](https://eslint.org/docs/rules/no-unused-vars)              | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/no-unused-vars)              |
+| `import/order`                | -                                                                          | ⚠️ `Warning`  | External rule                                                              |
+| `prefer-arrow-callback`       | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/prefer-arrow-callback)       |
+| `block-spacing`               | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/block-spacing)               |
+| `comma-spacing`               | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/comma-spacing)               |
+| `keyword-spacing`             | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/keyword-spacing)             |
+| `space-infix-ops`             | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-infix-ops)             |
+| `space-unary-ops`             | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-unary-ops)             |
+| `brace-style`                 | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/brace-style)                 |
+| `object-curly-spacing`        | Always                                                                     | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/object-curly-spacing)        |
+| `space-before-function-paren` | [Documentation](https://eslint.org/docs/rules/space-before-function-paren) | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-before-function-paren) |
+| `space-in-parens`             | Never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/space-in-parens)             |
+| `array-bracket-spacing`       | Never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/array-bracket-spacing)       |
+| `template-curly-spacing`      | Never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/template-curly-spacing)      |
+| `computed-property-spacing`   | Never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/computed-property-spacing)   |
+| `no-use-before-define`        | [Documentation](https://eslint.org/docs/rules/no-use-before-define)        | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-use-before-define)        |
+| `no-label-var`                | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-label-var)                |
+| `no-undef`                    | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-undef)                    |
+| `no-undefined`                | Off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-undefined)                |
 | `complexity`                  | 20                                                                         | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/complexity)                  |
-| `no-alert`                    | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-alert)                    |
-| `require-await`               | off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/require-await)               |
-| `yoda`                        | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/yoda)                        |
-| `no-empty`                    | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-empty)                    |
-| `no-extra-semi`               | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-extra-semi)               |
-| `valid-typeof`                | error | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/valid-typeof)                |
-| `jsx-quotes`                  | prefer-double                                                              | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/jsx-quotes)                  |
-| `unicode-bom`                 | never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/unicode-bom)                 |
-| `no-process-env`              | off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-process-env)              |
-| `no-process-exit`             | off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-process-exit)             |
-| `global-require`              | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/global-require)              |
+| `no-alert`                    | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-alert)                    |
+| `require-await`               | Off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/require-await)               |
+| `yoda`                        | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/yoda)                        |
+| `no-empty`                    | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-empty)                    |
+| `no-extra-semi`               | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-extra-semi)               |
+| `valid-typeof`                | [Documentation](https://eslint.org/docs/rules/valid-typeof)                | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/valid-typeof)                |
+| `jsx-quotes`                  | Prefer-double                                                              | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/jsx-quotes)                  |
+| `unicode-bom`                 | Never                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/unicode-bom)                 |
+| `no-process-env`              | Off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-process-env)              |
+| `no-process-exit`             | Off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-process-exit)             |
+| `global-require`              | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/global-require)              |
 <!--END_SECTION:eslint-config-->
 
 ---
@@ -136,13 +136,13 @@ export default {
 | `bracketSpacing`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#bracket-spacing)              |
 | `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embedded-language-formatting) |
 | `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#html-whitespace-sensitivity)  |
-| `jsxSingleQuote`             | `true`     | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
+| `jsxSingleQuote`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
 | `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
 | `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#prose-wrap)                   |
 | `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quote-props)                  |
 | `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#require-pragma)               |
-| `semi`                       | `false`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
-| `singleQuote`                | `true`     | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
+| `semi`                       | `false`     | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
+| `singleQuote`                | `true`      | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
 | `tabWidth`                   | `2`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
