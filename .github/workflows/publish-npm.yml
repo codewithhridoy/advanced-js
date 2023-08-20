@@ -31,6 +31,9 @@ jobs:
    - name: 🚀 Install dependencies
      run: pnpm install
    - name: 🚀 Publish package
-     run: pnpm run publish-packages
+     run: |
+       echo "https://registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > .npmrc
+       pnpm run publish-packages
      env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
