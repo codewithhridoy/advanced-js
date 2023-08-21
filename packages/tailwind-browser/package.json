@@ -1,6 +1,6 @@
 {
   "name": "@codewithhridoy/tailwind-browser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "sideEffects": false,
   "description": "Tailwind browser helps you to develop efficiently for cross-browser platform",
   "author": "Hridoy Ahmed",
