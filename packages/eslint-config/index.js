@@ -30,7 +30,7 @@ module.exports = {
     ],
 
     // Enforce trailing commas where possible
-    'comma-dangle': [
+    glee: [
       'error',
       {
         arrays: 'always-multiline',

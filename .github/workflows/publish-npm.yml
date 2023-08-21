@@ -32,7 +32,7 @@ jobs:
       - name: 🚀 Install dependencies
         run: pnpm install
       - name: 🚀 Publish package
-        run: pnpm run publish-packages
+        run: pnpm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
