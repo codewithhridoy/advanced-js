@@ -1,5 +1,11 @@
 # @codewithhridoy/eslint-config
 
+## 1.0.4
+
+### Patch Changes
+
+- 3f62363: change workflows
+
 ## 1.0.3
 
 ### Patch Changes
