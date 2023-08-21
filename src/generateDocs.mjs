@@ -29,7 +29,9 @@ const ESlintTable = markdownTable([
   ...Object.entries(ESlintConfig.default.rules).map(([ruleName, ruleConfig]) => {
     const ruleType = Array.isArray(ruleConfig) ? ruleConfig[0] : ruleConfig
     let description = Array.isArray(ruleConfig) ? ruleConfig[1] : ruleConfig
-    const docs = ruleName.toString().includes('/') ? 'External rule' : `[Documentation](https://eslint.org/docs/rules/${ruleName})`
+    const docs = ruleName.toString().includes('/')
+      ? 'External rule'
+      : `[Documentation](https://eslint.org/docs/rules/${ruleName})`
 
     if (typeof description === 'object') {
       description = ruleName.toString().includes('/') ? '-' : docs
@@ -38,33 +40,57 @@ const ESlintTable = markdownTable([
     const typeEmoji = {
       error: '🚫',
       warn: '⚠️',
-      off: '💡',
+      off: '💡'
     }[ruleType]
 
     const typeText = {
       error: 'Error',
       warn: 'Warning',
-      off: 'Disabled',
+      off: 'Disabled'
     }[ruleType]
 
     return [`\`${ruleName}\``, Capitalize(description.toString()), `${typeEmoji} \`${typeText}\``, docs]
-  }),
+  })
 ])
 
 const PrettierTable = markdownTable([
   ['Rule', 'Style', 'Documentation'],
   ...Object.entries(PrettierConfig.default).map(([ruleName, ruleConfig]) => {
-    const description = ruleName.toString().includes('/') ? '-' : `[Documentation](https://prettier.io/docs/en/options.html#${ruleName.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()})`
+    const description = ruleName.toString().includes('/')
+      ? '-'
+      : `[Documentation](https://prettier.io/docs/en/options.html#${ruleName
+          .replace(/([a-z])([A-Z])/g, '$1-$2')
+          .toLowerCase()})`
 
     return [`\`${ruleName}\``, `\`${ruleConfig}\``, description]
-  }),
+  })
 ])
 
-const ESlintDocs = readmeContent.slice(0, readmeContent.indexOf(startESlintMarker) + startESlintMarker.length) + '\n' + ESlintTable + '\n' + readmeContent.slice(readmeContent.indexOf(endESlintMarker))
-const PrettierDocs = ESlintDocs.slice(0, ESlintDocs.indexOf(startPrettierMarker) + startPrettierMarker.length) + '\n' + PrettierTable + '\n' + ESlintDocs.slice(ESlintDocs.indexOf(endPrettierMarker))
+const ESlintDocs =
+  readmeContent.slice(0, readmeContent.indexOf(startESlintMarker) + startESlintMarker.length) +
+  '\n' +
+  ESlintTable +
+  '\n' +
+  readmeContent.slice(readmeContent.indexOf(endESlintMarker))
+const PrettierDocs =
+  ESlintDocs.slice(0, ESlintDocs.indexOf(startPrettierMarker) + startPrettierMarker.length) +
+  '\n' +
+  PrettierTable +
+  '\n' +
+  ESlintDocs.slice(ESlintDocs.indexOf(endPrettierMarker))
 
-const ESlintPackageDocs = eslintReadme.slice(0, eslintReadme.indexOf(startESlintMarker) + startESlintMarker.length) + '\n' + ESlintTable + '\n' + eslintReadme.slice(eslintReadme.indexOf(endESlintMarker))
-const PrettierPackageDocs = prettierReadme.slice(0, prettierReadme.indexOf(startPrettierMarker) + startPrettierMarker.length) + '\n' + PrettierTable + '\n' + prettierReadme.slice(prettierReadme.indexOf(endPrettierMarker))
+const ESlintPackageDocs =
+  eslintReadme.slice(0, eslintReadme.indexOf(startESlintMarker) + startESlintMarker.length) +
+  '\n' +
+  ESlintTable +
+  '\n' +
+  eslintReadme.slice(eslintReadme.indexOf(endESlintMarker))
+const PrettierPackageDocs =
+  prettierReadme.slice(0, prettierReadme.indexOf(startPrettierMarker) + startPrettierMarker.length) +
+  '\n' +
+  PrettierTable +
+  '\n' +
+  prettierReadme.slice(prettierReadme.indexOf(endPrettierMarker))
 
 writeFileSync(eslintPath, ESlintPackageDocs)
 writeFileSync(prettierPath, PrettierPackageDocs)

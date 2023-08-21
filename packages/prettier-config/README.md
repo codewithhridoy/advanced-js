@@ -7,10 +7,10 @@
 npm install --save-dev @codewithhridoy/prettier-config
 
 #If you use yarn
-yarn add --dev @codewithhridoy/prettier-config
+yarn add -D @codewithhridoy/prettier-config
 
 #If you use pnpm (preferred)
-pnpm install --save-dev @codewithhridoy/prettier-config
+pnpm add -D @codewithhridoy/prettier-config
 ```
 
 ### 🔩 Usage
@@ -23,7 +23,7 @@ module.exports = {
 ```
 
 ```js
-// prettier-config.config.js
+// prettier-config.js
 import prettierConfig from "@codewithhridoy/prettier-config";
 
 export default {
@@ -47,7 +47,7 @@ export default {
 | `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embedded-language-formatting) |
 | `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#html-whitespace-sensitivity)  |
 | `jsxSingleQuote`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
-| `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
+| `printWidth`                 | `120`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
 | `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#prose-wrap)                   |
 | `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quote-props)                  |
 | `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#require-pragma)               |

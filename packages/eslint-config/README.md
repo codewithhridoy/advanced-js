@@ -7,10 +7,10 @@
 npm install --save-dev @codewithhridoy/eslint-config
 
 #If you use yarn
-yarn add --dev @codewithhridoy/eslint-config
+yarn add -D @codewithhridoy/eslint-config
 
 #If you use pnpm (preferred)
-pnpm install --save-dev @codewithhridoy/eslint-config
+pnpm add -D @codewithhridoy/eslint-config
 ```
 
 ### 🔩 Usage

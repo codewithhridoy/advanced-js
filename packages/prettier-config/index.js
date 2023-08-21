@@ -4,13 +4,13 @@ export default {
   embeddedLanguageFormatting: 'auto',
   htmlWhitespaceSensitivity: 'css',
   jsxSingleQuote: true,
-  printWidth: 200000,
+  printWidth: 120,
   proseWrap: 'preserve',
   quoteProps: 'as-needed',
   requirePragma: false,
   semi: false,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: 'es5',
-  useTabs: false,
+  trailingComma: 'none',
+  useTabs: false
 }
