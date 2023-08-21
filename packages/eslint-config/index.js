@@ -3,7 +3,7 @@ module.exports = {
   plugins: ['import', 'prettier'],
   ignorePatterns: ['dist/', 'coverage/'],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
   },
   rules: {
     // Enforce consistent line breaks
@@ -25,8 +25,8 @@ module.exports = {
     'import/newline-after-import': [
       'error',
       {
-        count: 1
-      }
+        count: 1,
+      },
     ],
 
     // Enforce trailing commas where possible
@@ -37,8 +37,8 @@ module.exports = {
         objects: 'always-multiline',
         imports: 'always-multiline',
         exports: 'always-multiline',
-        functions: 'never'
-      }
+        functions: 'never',
+      },
     ],
 
     // Disallow the use of eval()
@@ -61,9 +61,9 @@ module.exports = {
         'newlines-between': 'never',
         alphabetize: {
           order: 'asc',
-          caseInsensitive: true
-        }
-      }
+          caseInsensitive: true,
+        },
+      },
     ],
 
     // Enforce consistent spacing before and after keywords
@@ -96,8 +96,8 @@ module.exports = {
       {
         anonymous: 'never',
         named: 'never',
-        asyncArrow: 'always'
-      }
+        asyncArrow: 'always',
+      },
     ],
 
     // Enforce consistent spacing inside parentheses
@@ -158,6 +158,6 @@ module.exports = {
     'no-process-exit': 'off',
 
     // require all requires be top-level
-    'global-require': 'error'
-  }
+    'global-require': 'error',
+  },
 }

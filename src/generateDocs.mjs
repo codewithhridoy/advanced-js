@@ -40,17 +40,17 @@ const ESlintTable = markdownTable([
     const typeEmoji = {
       error: '🚫',
       warn: '⚠️',
-      off: '💡'
+      off: '💡',
     }[ruleType]
 
     const typeText = {
       error: 'Error',
       warn: 'Warning',
-      off: 'Disabled'
+      off: 'Disabled',
     }[ruleType]
 
     return [`\`${ruleName}\``, Capitalize(description.toString()), `${typeEmoji} \`${typeText}\``, docs]
-  })
+  }),
 ])
 
 const PrettierTable = markdownTable([
@@ -63,7 +63,7 @@ const PrettierTable = markdownTable([
           .toLowerCase()})`
 
     return [`\`${ruleName}\``, `\`${ruleConfig}\``, description]
-  })
+  }),
 ])
 
 const ESlintDocs =

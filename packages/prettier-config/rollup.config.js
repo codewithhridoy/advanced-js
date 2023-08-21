@@ -4,12 +4,12 @@ export default {
     {
       file: 'dist/mjs/index.js',
       format: 'esm',
-      compact: true
+      compact: true,
     },
     {
       file: 'dist/cjs/index.cjs',
       format: 'cjs',
-      compact: true
-    }
-  ]
+      compact: true,
+    },
+  ],
 }
