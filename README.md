@@ -49,7 +49,7 @@ module.exports = {
 | `semi`                        | Never                                                                      | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/semi)                        |
 | `newline-before-return`       | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/newline-before-return)       |
 | `import/newline-after-import` | -                                                                          | 🚫 `Error`    | External rule                                                              |
-| `glee`                        | [Documentation](https://eslint.org/docs/rules/glee)                        | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/glee)                        |
+| `comma-dangle`                | [Documentation](https://eslint.org/docs/rules/comma-dangle)                | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/comma-dangle)                |
 | `no-eval`                     | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-eval)                     |
 | `func-names`                  | As-needed                                                                  | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/func-names)                  |
 | `camelcase`                   | [Documentation](https://eslint.org/docs/rules/camelcase)                   | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/camelcase)                   |
