@@ -1,7 +1,8 @@
 {
-  "name": "@codewithhridoy/prettier-config",
-  "version": "1.0.4",
-  "description": "All configs are here for making your development easier like EsLint, Prettier, TailWind, tsconfig etc.",
+  "name": "@codewithhridoy/tailwind-browser",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "description": "Tailwind browser helps you to develop efficiently for cross-browser platform",
   "author": "Hridoy Ahmed",
   "license": "MIT",
   "repository": {
@@ -10,8 +11,6 @@
   },
   "bugs": "https://github.com/codewithhridoy/advanced-js/issues",
   "homepage": "https://github.com/codewithhridoy/advanced-js#readme",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/mjs/index.js",
   "type": "module",
   "exports": {
     "import": "./dist/mjs/index.js",
@@ -23,41 +22,32 @@
     "publish-packages": "pnpm publish --access public --no-git-checks",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
     "format": "prettier . --write --cache --ignore-unknown",
-    "format:check": "prettier . --check --ignore-unknown",
-    "lint": "eslint . --ext .js,.ts",
-    "lint:fix": "eslint . --ext .js,.ts --fix"
-  },
-  "peerDependencies": {
-    "prettier": "^3.0"
+    "format:check": "prettier --check . --ignore-unknown"
   },
   "devDependencies": {
-    "rollup": "3.28.0"
+    "rollup": "3.28.0",
+    "tailwindcss": "3.3.3"
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
   },
   "files": [
     "README.md",
     "dist"
   ],
   "keywords": [
-    "eslint",
-    "eslint-config",
-    "advanced-js",
-    "tailwind",
-    "tailwind-config",
-    "tsconfig",
-    "typescript",
-    "typescript-config",
-    "shared-configs",
-    "prettier",
-    "prettier-config",
-    "javascript",
-    "javascript-config",
-    "config",
-    "style-guide",
-    "turbo"
+    "tailwindcss",
+    "cross-browser",
+    "tailwind-browser",
+    "tailwind-cross-browser",
+    "next",
+    "react",
+    "firefox",
+    "chrome",
+    "safari"
   ],
+  "engines": {
+    "node": ">=16"
+  },
   "packageManager": "pnpm@8.6.12"
 }
