@@ -1,15 +1,15 @@
-name: Prettier check
-
+name: Publish [NPM]
 on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+  release:
+    types: [created]
 
 jobs:
-  check:
-    name: Format check
+  publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     strategy:
       fail-fast: false
       matrix:
@@ -26,8 +26,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@codewithhridoy'
           cache: 'pnpm'
       - name: 🚀 Install dependencies
         run: pnpm install
-      - name: 🚀 Check formatting
-        run: 'pnpm run format:check'
+      - name: 🚀 Publish package
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run publish-packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
