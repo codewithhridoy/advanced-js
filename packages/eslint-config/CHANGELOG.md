@@ -1,5 +1,11 @@
 # @codewithhridoy/eslint-config
 
+## 1.0.3
+
+### Patch Changes
+
+- 5c45b38: printwith and comma-dangle rules
+
 ## 1.0.2
 
 ### Patch Changes
