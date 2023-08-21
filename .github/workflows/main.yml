@@ -14,9 +14,9 @@ jobs:
           version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: 'pnpm'
       - name: 🚀 Install dependencies
         run: pnpm install --no-frozen-lockfile
       - name: 🚀 Check formatting and linting then build
-        run: pnpm run format:check && pnpm lint && pnpm build
+        run: pnpm int && pnpm lint && pnpm build
