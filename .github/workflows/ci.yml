@@ -35,4 +35,4 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
