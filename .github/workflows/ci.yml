@@ -34,3 +34,5 @@ jobs:
       - name: 🚀 Check changeset
         id: changesets
         uses: changesets/action@v1
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
