@@ -1,7 +1,12 @@
 name: Publish [Github]
 on:
-  release:
-    types: [created]
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+  push:
+    branches:
+      - "master"
 
 jobs:
   publish:
@@ -32,6 +37,9 @@ jobs:
       - name: 🚀 Install dependencies
         run: pnpm install
       - name: 🚀 Publish package
-        run: pnpm run publish-packages
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run release && pnpm run publish-packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
